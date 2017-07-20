@@ -13,11 +13,35 @@ Class -> KiwiJuiceEasy <br/>
 Method -> Java: public int[] the Pouring ( int[] capacities, int[] bottles, int[] fromId, int[] toId ) <br/>
 
 * 제약조건<br/>
-capacities -> 2~50개의 요소가 있는 배열. 각 요소는 1~1000000 사이의 값을 갖는다.<br/>
-bottles -> capacities와 같은 수의 요소가 있는 배열. bottles[i]는 capacities[i]에 들어있는 주스.<br/>
-fromId -> 1~50개의 요소가 있는 배열.<br/>
-toId -> fromId와 같은 수의 요소가 있는 배열.<br/>
-<br/>
+capacities: 2-50개의 요소가 있는 배열. 각 요소는 1-1000000 사이의 값을 갖는다.<br/>
+bottles: capacities와 같은 수의 요소가 있는 배열. bottles[i]는 capacities[i]에 들어있는 주스.<br/>
+fromId: 1-50개의 요소가 있는 배열.<br/>
+toId: fromId와 같은 수의 요소가 있는 배열.<br/>
 변수 fromId와 toId는 0~(N-1) 사이의 값. 이때 N은 변수 capacities의 항목 개수다. 변수 fromId[i]와 toId[i]는 서로 다른값을 갖는다.<br/>
 
-
+* 예시<br/>
+capacities = {20, 20}<br/>
+bottles = {5, 8}<br/>
+fromId = {0}<br/>
+toId = {1}<br/>
+Returns: {0, 13} <br/><br/>
+capacities = {10, 10}<br/>
+bottles = {5, 8}<br/>
+fromId = {0}<br/>
+toId = {1}<br/>
+Returns: {0, 13} <br/><br/>
+capacities = {30, 20, 10}<br/>
+bottles = {10, 5, 5}<br/>
+fromId = {0, 1, 2}<br/>
+toId = {1, 2, 0}<br/>
+Returns: {10, 10, 0} <br/><br/>
+capacities = {14, 35, 86, 58, 25, 62}<br/>
+bottles = {6, 34, 27, 38, 9, 60}<br/>
+fromId = {1, 2, 4, 5, 3, 3, 1, 0}<br/>
+toId = {0, 1, 2, 4, 2, 5, 3, 1}<br/>
+Returns: {0, 14, 65, 35, 25, 35} <br/><br/>
+capacities = {700000, 800000, 900000, 1000000}<br/>
+bottles = {478478, 478478, 478478, 478478}<br/>
+fromId = {2, 3, 2, 0, 1}<br/>
+toId = {0, 1, 1, 3, 2}<br/>
+Returns: {0, 156956, 900000, 856956}
