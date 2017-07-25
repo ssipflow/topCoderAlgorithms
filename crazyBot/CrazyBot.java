@@ -18,18 +18,18 @@ public class CrazyBot {
     }
 
     double dfs(int x, int y, int n){
-        if(grid[x][y]) return 0;
-        if(n == 0) return 1;
-        
+        if(grid[x][y]) return 0;    //이미 방문한 노드일 경우
+        if(n == 0) return 1;        //정해진 순서를 모두 돌았을 때
+
         grid[x][y] = true;
         double ret = 0;
-        
+
         for(int i = 0; i < 4; i++){
             //east, west, south, north 순서로 로봇을 움직인다.
             ret += dfs(x+vx[i], y+vy[i], n-1) * prob[i];
         }
         grid[x][y] = false;
-        
+
         return ret;
     }
 }
