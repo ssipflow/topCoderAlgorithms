@@ -34,7 +34,7 @@ startCol: 0&#126;M-1, M은 maze 요소의 문자 수<br/>
 maze[startRow][startCol]: '.'<br/>
 moveRow: 1&#126;50개의 요소가 있는 배열<br/>
 moveCol: moveRow와 같은 요소 수가 있는 배열<br/>
-moveRow, moveCol 공통: 각 요소는 -50$#126;50의 정수<br/><br/>
+moveRow, moveCol 공통: 각 요소는 -50&#126;50의 정수<br/><br/>
 
 * 예시<br/>
 maze = {"...', "...", "..."}<br/>
